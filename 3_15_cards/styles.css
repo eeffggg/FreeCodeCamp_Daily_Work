@@ -1,0 +1,58 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+#playing-cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  height:100vh;
+}
+.card{
+  display:flex;
+  width:200px;
+  height:300px;
+  box-shadow:0 2px 4px 0 grey;
+  border:1px black solid;
+  border-radius:9px;
+  justify-content:space-between;
+}
+.left-inner,.right-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:1.7rem;
+}
+#card-A-middle{
+  font-size:5.5rem;
+}
+#card-K-middle{
+  margin:40px 0;
+  border:1px black solid;
+}
+#card-K-middle img{
+  width:40px;
+}
+.middle{
+  font-size:2.9rem;
+  display:flex;
+  align-items:center;
+}
+.middle-left{
+  align-self:flex-start;
+}
+.middle-right{
+  align-self:flex-end;
+  transform:rotate(180deg);
+}
+.right{
+  align-self:flex-end;
+  transform:rotate(180deg);
+}
+.card1{
+  color:red;
+}
+.card2,.card3{
+  color:black;
+}
