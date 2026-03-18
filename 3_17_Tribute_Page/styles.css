@@ -1,0 +1,71 @@
+div {
+  appearance: none;
+  margin: auto;
+  border-radius: 4px;
+  width: 95%;
+  background: #e1e1e1;
+  box-shadow: 0 0 4px 1px #8d8d8d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#first-line {
+  font-style: italic;
+  font-family: "Microsoft YaHei Light", sans-serif;
+}
+h1 {
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+}
+h1::first-letter {
+  font-size: 10rem;
+  color: grey;
+}
+a {
+  display: block;
+  border: 2px solid black;
+  color: black;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+a:visited {
+  color: grey;
+}
+a:hover {
+  color: white;
+  background-color: black;
+}
+a:focus {
+  border: 5px black solid;
+}
+
+figure {
+  background-color: white;
+}
+figure,
+h2,
+p {
+  text-align: center;
+}
+p {
+  width: max(400px, 76vw);
+}
+#image {
+  margin: auto;
+  padding-left: 2px;
+  display: block;
+  max-width: 100%;
+  width: max(400px, 75vw);
+  height: auto;
+}
+#img-caption {
+  background-color: #272727;
+  color: #f1f1f1;
+  width: max(400px, 75vw);
+  margin: auto;
+  padding: 1px 0;
+}
+section {
+  width: 70%;
+}
