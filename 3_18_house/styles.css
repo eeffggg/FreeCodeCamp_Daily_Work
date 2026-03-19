@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#house {
+  position: relative;
+  border: 1px red solid;
+  background-color: green;
+  width: 500px;
+  height: 400px;
+  margin: 100px auto;
+}
+
+#chimney {
+  border: 1px red solid;
+  top: -200px;
+  left: 75px;
+  position: absolute;
+  width: 75px;
+  height: 200px;
+  background-color: #e61876;
+  z-index: -1;
+}
+
+#roof {
+  border: 40px #bb4d1a solid;
+  width: 420px;
+  height: 50px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+}
+
+#window-1 {
+  border: 1px red solid;
+  z-index: 1;
+  top: 170px;
+  left: 40px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #bb4d1a;
+}
+.window-12-1 {
+  border: 1px red solid;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fe9a37;
+}
+.window-12-2 {
+  border: 1px red solid;
+  z-index: 2;
+  top: 13px;
+  left: 53px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fe9a37;
+}
+.window-12-3 {
+  border: 1px red solid;
+  z-index: 2;
+  top: 53px;
+  left: 13px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fe9a37;
+}
+.window-12-4 {
+  border: 1px red solid;
+  z-index: 2;
+  top: 53px;
+  left: 53px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #fe9a37;
+}
+
+#window-2 {
+  border: 1px red solid;
+  z-index: 1;
+  top: 170px;
+  left: 360px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #bb4d1a;
+}
+
+#door {
+  border: 1px red solid;
+  z-index: 2;
+  left: 188px;
+  /* top:500px; */
+  bottom: 0;
+  position: absolute;
+  width: 124px;
+  height: 200px;
+  background-color: #9f0712;
+}
+.door-1-1 {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 180px;
+  left: 12px;
+  top: 15px;
+}
+.door-1-1-1 {
+  background-color: gold;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 80px;
+  top: 90px;
+}
