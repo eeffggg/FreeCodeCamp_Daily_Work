@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+  <body>
+    <main id="main-doc">
+      <h1>C++ Language</h1>
+      <!-- 笔记本/台式(媒体查询) 始终显示在屏幕左侧 + 始终对用户可见 -->
+      <nav id="navbar">
+        <header>
+          <!-- 描述主题 -->
+          <p>This is a reference of the core C++ language constructs.</p>
+        </header>
+        <div id="as">
+        <!-- a*5 + 导航效果(fixed) + (自)面包屑导航 -->
+        <a class="nav-link" href="#basic_concepts">Basic concepts</a>
+        <a class="nav-link" href="#keywords">Keywords</a>
+        <a class="nav-link" href="#preprocessor">Preprocessor</a>
+        <a class="nav-link" href="#expressions">Expressions</a>
+        <a class="nav-link" href="#declarations">Declarations</a>
+</div>
+      </nav>
+
+      <!-- ================================== -->
+      <!-- section*5 -->
+      <section id="basic_concepts" class="main-section">
+        <header>
+          <h2>Basic concepts</h2>
+        </header>
+        <!-- p*10 -->
+        <p>
+          <span>Comments</span>Comments serve as a sort of in-code
+          documentation. When inserted into a program, they are effectively
+          ignored by the compiler; they are solely intended to be used as notes
+          by the humans that read source code. Although specific documentation
+          is not part of the C++ standard, several utilities exist that parse
+          comments with different documentation formats.
+        </p>
+        <pre><code>/* comment */     (1) 
+// comment          (2)</code></pre>
+
+        <p>
+          <span>Punctuation</span>These are the punctuation symbols in C++. The
+          meaning of each symbol is detailed in the linked pages.
+        </p>
+        <p>
+          <span>Identifiers</span>An identifier is an arbitrarily long sequence
+          of digits, underscores, lowercase and uppercase Latin letters, and
+          most Unicode characters.
+        </p>
+        <p>
+          <span>Type</span>Objects, references, functions including function
+          template specializations, and expressions have a property called type,
+          which both restricts the operations that are permitted for those
+          entities and provides semantic meaning to the otherwise generic
+          sequences of bits.
+        </p>
+        <p>
+          <span>Object</span>C++ programs create, destroy, refer to, access, and
+          manipulate objects. An object, in C++, has size (can be determined
+          with sizeof); alignment requirement (can be determined with alignof);
+          storage duration (automatic, static, dynamic, thread-local); lifetime
+          (bounded by storage duration or temporary); type; value (which may be
+          indeterminate, e.g. for default-initialized non-class types);
+          optionally, a name.
+        </p>
+
+        <p>
+          <span>Definitions and ODR</span>Definitions are declarations that
+          fully define the entity introduced by the declaration. Every
+          declaration is a definition, except for the following: A function
+          declaration without a function body:
+          <pre><code> int f(int); // declares, but does not define f </code></pre>
+          Any declaration with an extern storage class specifier or with a
+          language linkage specifier (such as extern "C") without an
+          initializer:
+          <pre><code>extern const int a; // declares, but does not define a extern
+const int b = 1; // defines b</code></pre>
+        </p>
+        <p>
+          <span>Name lookup</span>Name lookup is the procedure by which a name,
+          when encountered in a program, is associated with the declaration that
+          introduced it.
+        </p>
+        <p>
+          <span>Qualified name lookup</span>A qualified name is a name that
+          appears on the right hand side of the scope resolution operator ::
+          (see also qualified identifiers). A qualified name may refer to a
+          class member (including static and non-static functions, types,
+          templates, etc), namespace member (including another namespace),
+          enumerator.
+        </p>
+        <p>
+          <span>The as-if rule </span>Allows any and all code transformations
+          that do not change the observable behavior of the program.
+        </p>
+        <p>
+          <span>Undefined behavior</span>Renders the entire program meaningless
+          if certain rules of the language are violated.
+        </p>
+        <ul>
+          <!-- li*5 -->
+          <li>
+            ill-formed - The program has syntax errors or diagnosable semantic
+            errors.
+            <ul>
+              <li>
+                A conforming C++ compiler is required to issue a diagnostic,
+                even if it defines a language extension that assigns meaning to
+                such code (such as with variable-length arrays).
+              </li>
+              <li>
+                The text of the standard uses shall, shall not, and ill-formed
+                to indicate these requirements.
+              </li>
+            </ul>
+          </li>
+          <li>
+            ill-formed, no diagnostic required - The program has semantic errors which may not be diagnosable in general case (e.g. violations of the ODR or other errors that are only detectable at link time).
+            <ul>
+              <li>
+                The behavior is undefined if such program is executed.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="keywords" class="main-section">
+        <header>
+          <h2>Keywords</h2>
+        </header>
+      </section>
+
+      <section id="preprocessor" class="main-section">
+        <header>
+          <h2>Preprocessor</h2>
+        </header>
+      </section>
+
+      <section id="expressions" class="main-section">
+        <header>
+          <h2>Expressions</h2>
+        </header>
+      </section>
+
+      <section id="declarations" class="main-section">
+        <header>
+          <h2>Declarations</h2>
+        </header>
+      </section>
+    </main>
+  </body>
+</html>
