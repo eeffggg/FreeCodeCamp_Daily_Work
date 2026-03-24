@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing:inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Baskervville", serif;
+    color: rgb(20, 30, 40);
+    background: #F5F5F0;
+}
+main{
+    width: 85vw;
+    margin:0 auto;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2.1rem;
+
+}
+h2,h3{
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+p{
+    gap:20px;
+    text-align: justify;
+    font-size: 1.5rem;
+    column-width: 25rem;
+}
+p::first-letter {
+    font-family: "Baskervville", serif;
+    font-size:2.5rem;
+    color:#00beef;
+    line-height: 0; /* 重置行高，避免撑开段落 */
+}
+
+.title,
+.feature-article,
+.secondary-article,
+.cover-image,
+.small-article1,
+.small-article2,
+.small-article3 {
+    grid-area: main;
+    background: #e8e8e3;
+    padding: 1.5rem;
+}
+.title {
+    grid-area: title;
+    /* grid-row:1/4; */
+}
+.feature-article {
+    grid-area: feature-article;
+}
+.secondary-article {
+    grid-area: secondary-article;
+}
+.cover-image {
+    grid-area: cover-image;
+}
+.small-article1 {
+    grid-area: small-article1;
+}
+.small-article2 {
+    grid-area: small-article2;
+}
+.small-article3 {
+    grid-area: small-article3;
+}
+
+.newspaper-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 40px;
+
+    grid-template-areas:
+    "title title title"
+    "feature-article feature-article cover-image"
+    "secondary-article secondary-article cover-image"
+    "small-article1 small-article2 small-article3";
+}
+.cover-image{
+    margin: 0; /* 去掉多余外边距 */
+    width: 100%;
+
+}
+.cover-image img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    margin-top: 30%;
+    border-radius: 8px 8px 0 0;
+
+}
+figcaption{
+    border-radius: 0 0 8px 8px;
+    padding:0.5rem 0;
+    text-align: center;
+    background-color: rgb(20,30, 40);
+    color:linen;
+}
