@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Product Landing Page</title>
+    <script src="https://kit.fontawesome.com/354a906aa6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
@@ -18,17 +19,18 @@
             loading="lazy"
     />
     <nav id="nav-bar">
-        <a class="nav-link" href="#main-articles">Articles</a>
+        <a class="nav-link" href="#cards-articles">Articles</a>
         <a class="nav-link" href="#video">Video</a>
         <a class="nav-link" href="#form">Form</a>
         <a class="nav-link" href="#footer">Footer</a>
     </nav>
-
 </header>
 <main>
     <form id="form" action="https://www.freecodecamp.org/email-submit">
-        <label for="email"></label><input id="email" type="email" name="email" placeholder="sample@123.com">
-        <input id="submit" type="submit" value="Submit">
+        <p class="h1">思绪 智慧 创意</p>
+        <label for="email"><i class="fa-solid fa-envelope"></i></label>
+        <input id="email" type="email" name="email" placeholder="sample@123.com">
+        <input id="submit" type="submit" value="Get Started">
     </form>
     <div id="cards-articles">
         <div class="card">
@@ -69,26 +71,76 @@
                 <button class="read-more">Read More</button>
             </div>
         </div>
-
-<!--        <div class="card">-->
-<!--            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fqqpublic.qpic.cn%2Fqq_public%2F0%2F0-3080208133-675E4BC7416BCF8A7080D7C7EF71B053%2F0%3Ffmt%3Djpg%26size%3D98%26h%3D675%26w%3D900%26ppv%3D1&refer=http%3A%2F%2Fqqpublic.qpic.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666879560&t=5b004561f76870b3f63849a665439023"-->
-<!--                 alt="前景为密集分布的摩天大楼，灯火通明；背景为海港及对岸建筑，上方覆盖厚重的深灰色云层。"-->
-<!--                 loading="lazy">-->
-<!--            <div class="card-content">-->
-<!--                <p class="title">万家灯火，无一盏归处</p>-->
-<!--                <p class="content">维港的霓虹在阴云下织成一张密不透风的网，-->
-<!--                    每一扇发光的窗户背后都藏着,-->
-<!--                    一个奔波的灵魂。</p>-->
-<!--                <button class="read-more">Read More</button>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
-    <video id="video" src="abc.com">
+
+    <video
+            id="video"
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+            loop
+            controls
+            muted
+            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+            width="400"
+    >
+        <source src="xx" type="video/mp4">
     </video>
+    <div id="plans">
+
+        <div id="free-plan" class="plan">
+            <p class="price">$0</p>
+            <ul class="plan-content">
+                <li class="yes">基础服务1</li>
+                <li class="yes">基础服务2</li>
+                <li class="yes">基础服务3</li>
+                <li class="yes">基础服务4</li>
+                <li class="yes">基础服务5</li>
+            </ul>
+                <button class="plan-name">Free</button>
+                <button class="choose-button">Choose plan</button>
+            <p class="illustrate">您将在下一步选择具体的支付方式</p>
+        </div>
+
+        <div id="plan-five" class="plan">
+            <p class="price">$3000</p>
+            <ul class="plan-content">
+                <li class="yes">基础服务1</li>
+                <li class="yes">基础服务2</li>
+                <li class="yes">基础服务3</li>
+                <li class="no">基础服务4</li>
+                <li class="no">基础服务5</li>
+            </ul>
+                <button class="plan-name">Pro</button>
+                <button class="choose-button">Choose plan</button>
+            <p class="illustrate">您将在下一步选择具体的支付方式</p>
+        </div>
+
+        <div id="plan-ten" class="plan">
+
+            <p class="price">$6000</p>
+            <ul class="plan-content">
+                <li class="yes">基础服务1</li>
+                <li class="no">基础服务2</li>
+                <li class="no">基础服务3</li>
+                <li class="no">基础服务4</li>
+                <li class="no">基础服务5</li>
+            </ul>
+                <button class="plan-name">Pro+</button>
+                <button class="choose-button">Choose plan</button>
+            <p class="illustrate">您将在下一步选择具体的支付方式</p>
+        </div>
+    </div>
 
 </main>
 
 <footer id="footer">
+    <div class="line1">
+        <a>Privacy</a>
+        <a>Terms</a>
+        <a>Contact</a>
+    </div>
+    <div class="line2">
+        <p>Copyright 2016, Original Trombones</p>
+    </div>
 </footer>
 
 </body>
