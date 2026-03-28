@@ -6,11 +6,21 @@
 
     --a-hover-width: 15rem;
     --a-hover-height: 6rem;
+
+    --color-dark:#1d2b38;
+    --color-light:#fdfdfd;
+
+    --cards-padding: 3rem;
+    --cards-gap:5rem;
+
+    --h1-font-size:7rem;
+
 }
 
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    background-color: #eee;
 }
 
 *, *::before, *::after {
@@ -21,19 +31,20 @@ html {
 
 header {
     display: flex;
+    z-index:999;
+
     /*保证nav-bar无固定高度的情况下 此设置可以穿透,让a元素y轴上居中*/
     align-items: center;
     /*对于图片和nav-bar, 由于它们本来就是header的子元素,居中是应该的*/
     justify-content: center;
     top: 0;
     position: sticky;
-    background-color: #1d2b38;
+    background-color: var(--color-dark);
     padding:0 4rem;
 }
 
 #nav-bar {
     /*border:blue 1px solid;*/
-
     /*占据图片剩下的宽度*/
     flex: 1;
     /*因为是占据剩下的宽度,为了能换行必须要有图片 + nav-bar宽度 > 窗口宽度的情况*/
@@ -41,7 +52,7 @@ header {
     justify-content: space-evenly;
 }
 
-a {
+#nav-bar > a {
     /*高宽设置固定值避免文字移动和超过高度*/
     height: var(--a-hover-height);
     width: var(--a-hover-width);
@@ -53,18 +64,23 @@ a {
     font-family: "Dancing Script", "Brush Script MT", cursive;
     padding: 0 var(--nav-a-padding);
     text-decoration: none;
-    color: #fdfdfd;
+    color: var(--color-light);
     font-size: 2rem;
 }
 
-a:hover {
+#nav-bar > a:hover {
     transition: 0.3s;
     border-bottom: 3px solid black;
-    border-top: 2px #fdfdfd solid;
+    border-top: 2px var(--color-light) solid;
     border-radius: 50%;
-    color: #fdfdfd;
-    background: linear-gradient(to top, #fdfdfd, #30485e 80%, #1d2b38);
+    color: var(--color-light);
+    background: linear-gradient(to top, var(--color-light), #30485e 80%, var(--color-dark));
 }
+a:active {
+    /*color:#00beef;*/
+    color:var(--color-dark);
+}
+
 
 #header-img {
     width: var(--nav-img-width);
@@ -72,26 +88,76 @@ a:hover {
 }
 
 main {
-    height: 2000px;
+    height: 100%;
+}
+form{
+    text-align: center;
+    padding: 2rem;
+}
+.h1{
+    font-size: var(--h1-font-size);
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-dark);
+    margin:5rem auto;
+}
+.fa-envelope{
+    color: var(--color-dark);
+    font-size: 3rem;
+    vertical-align: middle;
+    margin-bottom: 0.1rem;
+}
+#email{
+    height: 2.5rem;
+    width:20rem;
+    padding: .5rem;
+    /*color: pink;*/
+    /*background-color: pink;*/
+    border: 2px var(--color-dark) solid;
+    border-radius: 3px;
+    margin:0 0.2rem 0 0;
+}
+#submit{
+    text-decoration: none;
+    border: none;
+    vertical-align: middle;
+    display: block;
+    font-size: 3rem;
+    margin:5rem auto;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+#submit:hover{
+    border-bottom-color: var(--color-dark);
+}
+#submit:active{
+    color: rgba(0, 0, 0, 0.6);
+    /*text-decoration: underline;*/
+}
+#submit:visited{
+    color:purple;
 }
 #cards-articles{
+    /*height:100%;*/
     border:1px red solid;
-    padding: 1rem;
+    padding: var(--cards-padding);
     cursor:pointer;
-
     display: flex;
     flex-direction: row;
+    /*换行后的行高怎么处理? gap*/
+    gap:var(--cards-gap);
     justify-content: space-evenly;
     align-items: center;
 }
 .card {
-    /*border:1px green solid;*/
-    /*display: inline-block;*/
     text-align: center;
     box-shadow:  0 0 4px 0 grey;
     border-radius:8px;
 }
 .card > img{
+    display: block;
+    background-color: black;
+    padding-bottom: 1px;
     width:27.5rem;
     height:20.5rem;
     border-radius: 8px 8px 0 0;
@@ -100,8 +166,10 @@ main {
 }
 
 .card-content{
+    margin-bottom:1rem;
+
     /*margin:1rem 0;*/
-    /*border-top: 2px solid #1d2b38;*/
+    /*border-top: 2px solid var(--color-dark);*/
 
     /*border:1px black solid;*/
 }
@@ -120,24 +188,169 @@ main {
     font-size:1.2rem;
     line-height: 2rem;
     margin:1rem 0;
-    color:#1d2b38;
+    color:var(--color-dark);
 }
 
 .card-content > button{
-    margin-bottom:1rem;
     padding:0.5rem 0.7rem 0.3rem 0.7rem;
-    color:#fdfdfd;
-    background-color: #1d2b38;
+    color:var(--color-light);
+    background-color: var(--color-dark);
     border-radius: 3px;
     border: none;
-    /*line-height: 3rem;*/
-    /*vertical-align: bottom;*/
-    /*border-top: 2px solid #1d2b38;*/
-
-    /*border:1px black solid;*/
+}
+.card-content > button:hover{
+    background-color: rgb(0,0,0,0.6);
+}
+#video{
+    margin-left: 20%;
 }
 
+/*计划容器*/
+#plans{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:var(--cards-gap);
+    border: 1px solid red;
+}
+/*通用价格*/
+.price{
+    margin-top:2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#1b2a3d;
+}
+/*计划共通效果*/
+.plan{
+    width:27rem;
+    height:37rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 grey;
+    text-align: center;
+    cursor: pointer;
 
+}
+/*计划共通悬浮效果*/
+.plan:hover{
+    box-shadow: 0 10px 16px 0 grey;
+}
+/*计划共通内容*/
+.plan-content{
+    list-style: none;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.plan-content li[class="yes"]::before{
+    /*✅和❌*/
+    content: "✅";
+}
+.plan-content li[class="no"]::before{
+    /*✅和❌*/
+    content: "❌";
+}
+
+/*通用计划说明*/
+.illustrate{
+    margin-top: 0.5rem;
+    margin-bottom: 17%;
+    text-align: left;
+    margin-right: 12%;
+    color:#767875;
+}
+
+/*按钮共通属性*/
+.plan > button{
+    font-weight: bold;
+    display: inline-block;
+    width:80%;
+    font-size: 2rem;
+    padding:2rem 4rem;
+    border-radius: 4px;
+}
+button[class="plan-name"]{
+    display: block;
+}
+button[class="choose-button"]{
+    display: none;
+}
+.plan:hover .plan-name{
+    display: none;
+}
+.plan:hover .choose-button{
+    display: block;
+}
+/*button[class="plan-name"]:has(.plan:hover){*/
+/*    display: none;*/
+/*!*}*!*/
+/*button[class="choose-button"]:has(button[class="plan-name"]:hover){*/
+/*    display: block;*/
+/*}*/
+
+
+/*特定计划1*/
+#free-plan{
+    border:2px solid black;
+    background-color: #DADADA;
+}
+/*计划1特定按钮*/
+#free-plan > button{
+    border:1px solid black;
+    background-color: #797979;
+    color:#181818;
+    box-shadow: 0 4px 4px 0 grey;
+}
+
+/*特定计划2*/
+#plan-five{
+    border:2px solid #00ceb7;
+    background-color: #eafbf3;
+}
+/*计划2特定按钮*/
+#plan-five > button{
+    border:2px solid #00c5af;
+    background-color: #00d3bb;
+    color:#084d49;
+    box-shadow: 0 4px 4px 0 #7fe9da;
+}
+
+/*特定计划3*/
+#plan-ten{
+    border:2px solid #fcb700;
+    background-color: #fff7ed;
+}
+/*计划3特定按钮*/
+#plan-ten > button{
+    border:2px solid #ecab00;
+    background-color: #fcb700;
+    color:#793205;
+    box-shadow: 0 4px 4px 0 #f8cc5d;
+}
+/*页脚*/
+footer{
+    /*background-color: var(--color-dark);*/
+    margin:0 0 0 2% ;
+
+}
+.line1{
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.line1 > a{
+    font-family:cursive;
+    font-size:2rem;
+    color: var(--color-dark);
+}
+.line2{
+    /*color:var(--color-light);*/
+    color:var(--color-dark);
+
+}
 
 @media only screen and (max-width: 930px) {
     :root {
@@ -145,14 +358,22 @@ main {
         --a-hover-height: 4rem;
         --nav-img-height: 5.6rem;
         --nav-img-width: 19.2rem;
+        --cards-padding: 0;
+        --cards-gap: 0;
+        --h1-font-size: 5rem;
     }
     header{
         flex-wrap: wrap;
     }
-    #nav-bar {
-
+    #cards-articles{
+        flex-wrap: wrap;
+        border: 1px solid var(--color-dark);
     }
-    #header-img,a{
+    .card, .plan{
+        transform: scale(0.85);
+    }
+    #plans{
+        flex-wrap:wrap;
     }
 }
 
