@@ -1,0 +1,26 @@
+main{
+  margin:auto;
+  max-width:200px;
+}
+hr{
+  color:rgba(0,0,0,0.5);
+}
+h1{
+  text-align:center;
+}
+ul{
+  padding:0;
+  list-style:none;
+}
+li{
+  position:relative;
+}
+.favorite-icon{
+  position:absolute;
+  right:0;
+  border:none;
+  background:transparent;
+}
+.filled{
+  color:red;
+}
