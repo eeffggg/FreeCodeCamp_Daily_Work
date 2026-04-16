@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background:linear-gradient(30deg,grey,black) ;
+}
+*, *::before, *::after {
+    box-sizing:inherit;
+    margin: 0;
+    padding: 0;
+}
+main{
+  height:100vh;
+}
+h1{
+  border:double 1.5rem linen;
+   /* border: 4px double #333; */
+  font-size:5rem;
+  max-width:60rem;
+  color:linen;
+  margin:3rem auto;
+  text-align:center;
+}
+.gallery{
+  display:flex;
+  flex-direction:row;
+  gap:1.5rem;
+  justify-content:center;
+}
+.gallery img{
+  object-fit:cover;
+  width:250px;
+  height:300px;
+}
+#close-btn{
+  position:absolute;
+  top:0;
+  left:0;
+  /* z-index:999; */
+}
+.lightbox{
+  position:fixed;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
