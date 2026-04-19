@@ -1,0 +1,40 @@
+/* 1. Light 主题的惊喜效果（浅蓝灰起点） */
+.surprise-light {
+  background: linear-gradient(45deg, #A5B8C9 30%, #300c03);
+}
+
+/* 2. Dark 主题的惊喜效果（深蓝灰起点） */
+.surprise-dark {
+  background: linear-gradient(45deg, #3b4252 30%, #300c03);
+}
+
+/* 3. Ocean 主题的惊喜效果（深海蓝起点） */
+.surprise-ocean {
+  background: linear-gradient(45deg, #173777 30%, #300c03);
+}
+
+/* 4. Nord 主题的惊喜效果（深灰蓝起点） */
+.surprise-nord {
+  background: linear-gradient(45deg, #2e3440 30%, #300c03);
+}
+/**
+是的，你现在完全理解对了！ 我来用最简单的话把整个“意外惊喜”的过程再捋一遍：最开始
+body 的背景是：
+linear-gradient(45deg, var(--button-color) 30%, #300c03)
+--button-color 默认是 #781500（深红），所以整个页面是深红→深褐的渐变。
+后来你让我把所有颜色换成变量
+--button-color 也一起被换成了变量。
+你真正想做的事
+不同主题下，按钮文字颜色 要跟着变 → 所以写了 JS 去动态修改 --button-color 为对应主题的 -2-color。
+最精彩的意外发生了
+你虽然把 class 写成了 theme-light（这个 class 在 CSS 里根本不存在，所以完全没生效），
+但 修改 --button-color 的那行代码却正常生效了！结果就是：
+body 默认的渐变起点颜色（var(--button-color)）被实时改成了：Light → #A5B8C9（浅蓝灰）
+Dark → #3b4252（深蓝灰）
+Ocean → #173777（深海蓝）
+Nord → #2e3440（深灰蓝）
+
+于是就出现了你截图里那四种完全不同、非常惊艳的渐变！
+
+这就是为什么“明明 class 写错了，却意外得到了超级好看的效果”。
+*/
