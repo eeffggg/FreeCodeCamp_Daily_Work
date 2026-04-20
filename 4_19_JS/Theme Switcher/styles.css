@@ -1,0 +1,119 @@
+:root{
+  --button-color: #781500;
+
+  --light-1-color:#faf0e6;
+  --light-2-color:#A5B8C9;
+  --dark-1-color:#808080;
+  --dark-2-color:#3b4252;
+  --ocean-2-color:#173777;
+  --ocean-1-color:#B0D0E0;
+  --nord-2-color:#2e3440;
+  --nord-1-color:#8fbcbb;
+  
+}
+
+html{
+  font-size:18px;
+}
+
+body {
+  background: linear-gradient(45deg,#781500  30%, #300c03);
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+  height:100vh;
+}
+
+button{
+  cursor: pointer; 
+  margin:0;
+  border:none;
+  padding:5px;
+  background:#e8d9c0;
+  font-size:1rem;
+  color: var(--button-color);
+}
+
+button:hover{
+  background-color:#D7B684;
+}
+
+ul {
+  position:absolute;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding:0 10px;
+  text-align:left;
+  list-style-type: none;
+  cursor: pointer;
+  user-select: none;
+  background-color:transparent;
+}
+
+/* ==================== 主题切换样式 ==================== */
+
+#theme-light{
+  color: var(--light-1-color);
+}
+#theme-light:hover{
+  background-color: var(--light-1-color);
+  color: var(--light-2-color);
+}
+
+#theme-dark{
+  color: var(--light-1-color);
+}
+#theme-dark:hover{
+  background-color: var(--dark-1-color);
+  color: var(--dark-2-color);
+}
+
+#theme-ocean{
+  color: var(--light-1-color);
+}
+#theme-ocean:hover{
+  background-color: var(--ocean-2-color);
+  color: var(--ocean-1-color);
+}
+
+#theme-nord{
+  color: var(--light-1-color);
+}
+#theme-nord:hover{
+  background-color: var(--nord-2-color);
+  color: var(--nord-1-color);
+}
+
+/* ==================== 页面主题背景 ==================== */
+
+.theme-light{
+  background: linear-gradient(45deg, var(--light-2-color), var(--light-1-color));
+}
+
+.theme-dark{
+  background: linear-gradient(to top, var(--dark-1-color), var(--dark-2-color));
+}
+
+.theme-ocean{
+  background: linear-gradient(to left, var(--ocean-1-color), var(--ocean-2-color));
+}
+
+.theme-nord{
+  background: linear-gradient(-45deg, var(--nord-1-color) 5%, var(--nord-2-color) 95%);
+}
+
+h1{
+  margin-left:50px;
+  text-align: center;
+  font-size:3rem;
+  color: var(--light-1-color);   /* 原来是 linen，和 --light-1-color 一致 */
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+  color:linen;
+}
