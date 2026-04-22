@@ -1,0 +1,116 @@
+/** 
+  --light-1-color:#faf0e6;
+  --light-2-color:#A5B8C9;
+  --dark-1-color:#808080;
+  --dark-2-color:#3b4252;
+  --ocean-2-color:#173777;
+  --ocean-1-color:#B0D0E0;
+  --nord-2-color:#2e3440;
+  --nord-1-color:#8fbcbb;
+*/
+:root {
+  --theme-color: linen;
+  --btn-color: #1b2632;
+  --btn-bc-color: #951a01;
+  --html-background: linear-gradient(45deg, #2e3440 30%, #561505);
+}
+html {
+  color: var(--theme-color);
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100vh;
+  background: var(--html-background);
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+}
+h1 {
+  font-size: 8rem;
+  margin: 1.75rem 1rem;
+}
+hr {
+  margin: 5rem auto;
+  border: none;
+  border-bottom: 0.1rem solid var(--theme-color);
+  height: 2px;
+  width: 80%;
+}
+#main-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 15vh;
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  border: 3px solid hsl(from var(--theme-color) h s calc(l * 0.92));
+  border-radius: 8px;
+  background-color: #352e34;
+}
+.bi {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+} /* 一般不推荐使用target让两个图标轮流显隐 */
+
+label[for="text-input"] {
+  font-size: 2rem;
+}
+#text-input {
+  vertical-align: middle;
+  /* js中增加随输入 */
+  min-width: 5rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--theme-color);
+  caret-color: var(--theme-color);
+  border: none;
+  border-bottom: 2px solid var(--theme-color);
+  background: transparent;
+  /* 移除focus时的边框 */
+  outline: none;
+}
+#text-input:focus {
+  border-bottom: 4px solid var(--theme-color);
+  border-radius: 4px;
+}
+#check-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  /* border-top:0.2rem solid #1c0500; */
+  border-radius: 0 0 6px 6px;
+  background-color: var(--theme-color);
+  /* 让按钮具有按下的效果:步骤1 */
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.7);
+  /* 把得到的颜色变浅一点 */
+  color: hsl(from var(--btn-color) h s calc(l * 3.8));
+}
+#check-btn:hover {
+  background-color: var(--btn-color);
+  color: hsl(from var(--btn-color) h s calc(l * 2.8));
+}
+#check-btn:active {
+  background-color: var(--btn-color);
+  /* 让按钮具有按下的效果:步骤2 */
+  box-shadow: 1px 1px 1px 1px #000000cb;
+  color: hsl(from var(--btn-color) h s calc(l * 2.8));
+}
+#result {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  color: linen;
+}
