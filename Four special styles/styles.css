@@ -1,3 +1,14 @@
+/**
+  --light-1-color:#faf0e6;
+  --light-2-color:#A5B8C9;
+  --dark-1-color:#808080;
+  --dark-2-color:#3b4252;
+  --ocean-2-color:#173777;
+  --ocean-1-color:#B0D0E0;
+  --nord-2-color:#2e3440;
+  --nord-1-color:#8fbcbb;
+*/
+
 /* 1. Light 主题的惊喜效果（浅蓝灰起点） */
 .surprise-light {
   background: linear-gradient(45deg, #A5B8C9 30%, #300c03);
